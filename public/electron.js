@@ -30,7 +30,8 @@ function createWindow() {
       nodeIntegration: true
     },
     backgroundColor: '#000000',
-    title: 'Lavalier'
+    title: 'Lavalier',
+    show: false
   })
 
   // Removes the ugly Windows toolbar at the top of the window :)
@@ -42,6 +43,10 @@ function createWindow() {
   if (isDevEnvironment) {
     win.webContents.openDevTools({ mode: 'detach' })
   }
+
+  win.once('ready-to-show', () => {
+    win.show()
+  })
 }
 
 // This method will be called when Electron has finished
