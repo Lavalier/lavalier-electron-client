@@ -9,7 +9,7 @@ function App() {
           <div className="d-grid">
             <h1 className="display-logo text-center pb-5">Lavalier</h1>
             <p className="text-center">
-              Welcome to Lavalier! Enter a server address to access your Lavalier content.
+              Welcome to Lavalier! Enter a server address in the field below to access Lavalier content.
               <br />
               New to Lavalier? Download the <a href="#">Lavalier Server</a> and try out Lavalier for yourself!
             </p>
