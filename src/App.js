@@ -13,12 +13,11 @@ function App() {
               <br />
               New to Lavalier? Download the <a href="#">Lavalier Server</a> and try out Lavalier for yourself!
             </p>
-            <input
-              type="text"
-              className="my-3 form-control form-control-lg"
-              placeholder="https://watch.cyberdyne.zone"
-            />
-            <button className="btn btn-lg btn-danger">Continue</button>
+            <input type="text" className="my-3 form-control form-control-lg" placeholder="https://watch.lavalier.tv" />
+            <button className="btn btn-lg btn-danger">
+              <span className="align-middle">Continue</span>
+              <i className="icon-arrow-right-circle icons align-middle"></i>
+            </button>
           </div>
         </div>
       </div>
