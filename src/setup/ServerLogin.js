@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import usePersistedState from '../usePersistedState'
 import { fetchJSON, pushJSON } from '../fetchUtils'
 
+import { nanoid } from 'nanoid'
+
 import LogoText from '../common/LogoText'
 import ServerName from '../common/ServerName'
 
@@ -61,6 +63,7 @@ function ServerLogin(props) {
         setServers(
           servers.concat([
             {
+              local_server_id: nanoid(),
               server_name: loginResponse.server_name,
               username: loginResponse.username,
               email: loginResponse.email,
