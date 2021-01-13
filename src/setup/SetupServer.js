@@ -13,6 +13,8 @@ function SetupServer(props) {
   const [adminUsername, setAdminUsername] = useState('')
   const [adminPassword, setAdminPassword] = useState('')
 
+  const [passwordShown, setPasswordShown] = useState(false)
+
   const [error, setError] = useState('')
 
   const history = useHistory()
@@ -95,15 +97,26 @@ function SetupServer(props) {
               <div className="col">
                 <div className="mb-3">
                   <label className="fw-bold form-label">Admin Account Password</label>
-                  <input
-                    type="password"
-                    className="mb-3 form-control form-control-lg"
-                    placeholder="**************"
-                    onChange={(e) => {
-                      setAdminPassword(e.target.value)
-                    }}
-                    required
-                  />
+                  <div className="input-group mb-3">
+                    <input
+                      type={passwordShown ? 'text' : 'password'}
+                      className="form-control form-control-lg"
+                      placeholder="**************"
+                      onChange={(e) => {
+                        setAdminPassword(e.target.value)
+                      }}
+                      required
+                    />
+                    <button
+                      className="btn btn-primary"
+                      type="button"
+                      onClick={(e) => {
+                        setPasswordShown(!passwordShown)
+                      }}
+                    >
+                      {passwordShown ? 'Hide' : 'Show'}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
