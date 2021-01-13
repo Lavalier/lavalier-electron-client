@@ -74,8 +74,30 @@ h1.display-logo {
   user-select: none;
 }
 
-.icons {
+.icons.left {
   margin-left: 0.5rem;
+}
+
+.icons.right {
+  margin-right: 0.5rem;
+}
+
+.icons.large-icons {
+  font-size: 22pt;
+}
+
+.icons.huge-icons {
+  font-size: 7rem;
+}
+
+a:not(href):not(disabled) {
+  cursor: pointer;
+}
+
+// Custom Colors ===============================================================
+
+.text-dark-green {
+  color: $dark-green;
 }
 
 // Navbar ======================================================================
