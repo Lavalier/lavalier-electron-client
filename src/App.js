@@ -7,6 +7,7 @@ import Welcome from './setup/Welcome'
 import ServerLogin from './setup/ServerLogin'
 import SetupServer from './setup/SetupServer'
 import Home from './home/Home'
+import VideoPlayer from './watch/VideoPlayer'
 
 function App() {
   const [servers] = usePersistedState('servers', [])
@@ -21,8 +22,9 @@ function App() {
         ></Route>
         <Route path="/setup" component={Welcome}></Route>
         <Route path="/setup-server" component={SetupServer}></Route>
-        <Route path="/login" render={(props) => <ServerLogin {...props} />}></Route>
+        <Route path="/login" component={ServerLogin}></Route>
         <Route path="/home" component={Home}></Route>
+        <Route path="/watch/:id" component={VideoPlayer}></Route>
       </Switch>
     </Router>
   )

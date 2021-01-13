@@ -94,10 +94,22 @@ a:not(href):not(disabled) {
   cursor: pointer;
 }
 
+.top-view {
+  z-index: 999;
+}
+
+.top-secondary-view {
+  z-index: 998;
+}
+
 // Custom Colors ===============================================================
 
 .text-dark-green {
   color: $dark-green;
+}
+
+.bg-dim {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 // Navbar ======================================================================
