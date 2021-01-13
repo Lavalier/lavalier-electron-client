@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { pushJSON } from '../fetchUtils'
 
 import LogoText from '../common/LogoText'
+import ErrorBox from '../common/ErrorBox'
 
 function SetupServer(props) {
   const address = props.location.state.address
@@ -11,6 +12,8 @@ function SetupServer(props) {
   const [adminEmail, setAdminEmail] = useState('')
   const [adminUsername, setAdminUsername] = useState('')
   const [adminPassword, setAdminPassword] = useState('')
+
+  const [error, setError] = useState('')
 
   const history = useHistory()
 
@@ -32,7 +35,7 @@ function SetupServer(props) {
       )
 
       if (setupResponse.error) {
-        alert(setupResponse.message)
+        setError(setupResponse.message)
       } else {
         history.push('/login', {
           address: address
@@ -49,6 +52,7 @@ function SetupServer(props) {
           <LogoText />
           <p className="text-center">Welcome to Lavalier! Let's setup your server!</p>
           <form onSubmit={handleSubmit} className="mt-4">
+            <ErrorBox message={error} />
             <div className="mb-3">
               <label className="fw-bold form-label">Server Name</label>
               <input

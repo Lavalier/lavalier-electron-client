@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid'
 
 import LogoText from '../common/LogoText'
 import ServerName from '../common/ServerName'
+import ErrorBox from '../common/ErrorBox'
 
 function ServerLogin(props) {
   let largeIcon
@@ -42,6 +43,8 @@ function ServerLogin(props) {
   const [password, setPassword] = useState('')
   const [servers, setServers] = usePersistedState('servers', [])
 
+  const [error, setError] = useState('')
+
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -58,7 +61,7 @@ function ServerLogin(props) {
       )
 
       if (loginResponse.error) {
-        alert(loginResponse.message)
+        setError(loginResponse.message)
       } else {
         setServers(
           servers.concat([
@@ -96,6 +99,7 @@ function ServerLogin(props) {
             <form onSubmit={handleSubmit}>
               <div className="d-grid">
                 <LogoText />
+                <ErrorBox message={error} />
                 <input
                   type="text"
                   className="my-3 form-control form-control-lg"
