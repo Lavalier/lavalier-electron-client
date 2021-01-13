@@ -27,6 +27,11 @@ function Welcome() {
             Welcome to Lavalier! Enter a server address in the field below to access Lavalier content.
             <br />
             New to Lavalier? Download the <a href="#">Lavalier Server</a> and try out Lavalier for yourself!
+            <br />
+            <br />
+            <span className="text-danger fw-bold text-decoration-underline">
+              Authentication is handled by a third-party, we cannot guarantee the integrity of your account information.
+            </span>
           </p>
           <form onSubmit={handleSubmit}>
             <input
