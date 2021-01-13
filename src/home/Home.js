@@ -1,6 +1,8 @@
 import { useHistory } from 'react-router-dom'
 import usePersistedState from '../usePersistedState'
 
+import LoadingScreen from '../common/LoadingScreen'
+
 function Home() {
   const history = useHistory()
 
@@ -14,7 +16,7 @@ function Home() {
     setCurrentServer(servers[0])
   }
 
-  return <div></div>
+  return <LoadingScreen />
 }
 
 export default Home
