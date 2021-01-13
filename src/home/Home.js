@@ -9,8 +9,11 @@ function Home() {
   const [servers] = usePersistedState('servers', [])
   const [currentServer, setCurrentServer] = usePersistedState('currentServer', {})
 
+  // Make sure we have a server before we continue :D
   if (servers.length == 0) {
     history.push('/setup')
+
+    return <div />
   } else if (!currentServer.token) {
     // Set currentServer to the first server in persistant storage if a server is available
     setCurrentServer(servers[0])
