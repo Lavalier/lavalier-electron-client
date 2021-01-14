@@ -9,7 +9,7 @@ import ErrorBox from '../common/ErrorBox'
 function AddProfile() {
   const [name, setName] = useState('')
 
-  const [currentServer, setCurrentServer] = usePersistedState('currentServer', {})
+  const [currentServer] = usePersistedState('currentServer', {})
   const history = useHistory()
 
   const [error, setError] = useState('')

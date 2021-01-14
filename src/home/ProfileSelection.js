@@ -51,7 +51,7 @@ function ProfileSelection() {
           <div className="row row-cols-auto d-flex justify-content-center">
             {profiles.map((profile) => (
               <div className="col">
-                <Profile name={profile.name} onClick={() => useProfile(profile)} />
+                <Profile name={profile.name} onClick={async () => useProfile(profile)} />
               </div>
             ))}
             <div className="col">

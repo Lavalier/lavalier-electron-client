@@ -65,10 +65,19 @@ body {
   box-shadow: 0 4px 15px 5px #000000b8;
 }
 
-h1.display-logo {
+.display-logo {
   font-family: 'Quicksand';
   font-weight: 450;
   font-size: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  user-select: none;
+}
+
+.display-logo.small {
+  font-family: 'Quicksand';
+  font-weight: 450;
+  font-size: 1.8rem;
   text-transform: uppercase;
   text-decoration: underline;
   user-select: none;
@@ -110,6 +119,28 @@ a:not(href):not(disabled) {
 img.profile-card {
   width: 10rem;
   height: 10rem;
+}
+
+.dropdown-menu.small {
+  max-width: 10rem;
+}
+
+nav.bg-special {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(100px);
+}
+
+ul.dropdown-menu {
+  opacity: 0;
+}
+
+a.dropdown-toggle:hover ~ ul.dropdown-menu {
+  opacity: 1;
+}
+
+ul.dropdown-menu:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 // Custom Colors ===============================================================
