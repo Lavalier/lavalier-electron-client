@@ -8,7 +8,7 @@ function LoadingScreen() {
         <div className="d-grid">
           <LogoText />
           <div className="text-center">
-            <div class="spinner-border" role="status" />
+            <div className="spinner-border" role="status" />
           </div>
         </div>
       </div>

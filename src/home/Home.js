@@ -19,6 +19,13 @@ function Home() {
     setCurrentServer(servers[0])
   }
 
+  // Ensure a profile is selected before continuing to home
+  if (!currentServer.profile) {
+    history.push('/profiles')
+
+    return <div />
+  }
+
   return <LoadingScreen />
 }
 

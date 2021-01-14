@@ -3,7 +3,7 @@ function VideoPlayer() {
     <div className="container-fluid d-flex align-items-center min-vh-100">
       <div className="container top-view">
         <div className="text-center">
-          <div class="spinner-border" role="status" />
+          <div className="spinner-border" role="status" />
         </div>
       </div>
       <div className="position-absolute bg-dim top-secondary-view top-0 bottom-0 start-0 end-0"></div>

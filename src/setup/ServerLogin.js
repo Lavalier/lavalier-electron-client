@@ -67,6 +67,7 @@ function ServerLogin(props) {
           servers.concat([
             {
               local_server_id: nanoid(),
+              address: address,
               server_name: loginResponse.server_name,
               username: loginResponse.username,
               email: loginResponse.email,

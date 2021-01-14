@@ -102,6 +102,16 @@ a:not(href):not(disabled) {
   z-index: 998;
 }
 
+.profile-card {
+  width: 10rem;
+  height: 12rem;
+}
+
+img.profile-card {
+  width: 10rem;
+  height: 10rem;
+}
+
 // Custom Colors ===============================================================
 
 .text-dark-green {
