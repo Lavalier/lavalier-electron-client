@@ -41,7 +41,7 @@ function Navbar(props) {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-special">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-special position-fixed start-0 end-0">
       <div className="container-fluid px-5">
         <a className="navbar-brand">
           <LogoText white small />

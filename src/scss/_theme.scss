@@ -57,6 +57,10 @@ body {
   background: conic-gradient(from 180deg, #ff0000, #2797ff 240deg, #ef04f3 250deg, #000000 285deg);
 }
 
+.special-gradient.special-gradient-two {
+  background: conic-gradient(from 180deg, #544848, #0b3b67 240deg, #170117 250deg, #252424 285deg);
+}
+
 .mw-50 {
   max-width: 50%;
 }
@@ -121,13 +125,27 @@ img.profile-card {
   height: 10rem;
 }
 
+.poster-card {
+  width: 12rem;
+  height: auto;
+}
+
+img.poster-card {
+  width: 12rem;
+  height: 17rem;
+}
+
 .dropdown-menu.small {
   max-width: 10rem;
 }
 
+nav {
+  z-index: 1;
+}
+
 nav.bg-special {
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
 }
 
 ul.dropdown-menu {
@@ -143,6 +161,42 @@ ul.dropdown-menu:hover {
   transition: opacity 0.3s;
 }
 
+.object-cover {
+  object-fit: cover;
+}
+
+.featured {
+  margin-top: 15rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.dimmed-item {
+  mix-blend-mode: soft-light; // color-dodge and multiply are not bad either
+}
+
+.mt-6 {
+  margin-top: 14rem !important;
+}
+
+@media (max-width: 1730px) {
+  .mt-6 {
+    margin-top: 4rem !important;
+  }
+}
+
+.ms-6 {
+  margin-left: 5rem !important;
+}
+
+.ms-row-fix {
+  margin-left: 3.4rem !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
 // Custom Colors ===============================================================
 
 .text-dark-green {
@@ -151,6 +205,10 @@ ul.dropdown-menu:hover {
 
 .bg-dim {
   background: rgba(0, 0, 0, 0.6);
+}
+
+.bg-black {
+  background: #000000;
 }
 
 // Navbar ======================================================================
