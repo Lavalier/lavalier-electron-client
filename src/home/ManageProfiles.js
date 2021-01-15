@@ -49,6 +49,9 @@ function ManageProfiles() {
                 <Profile name={profile.name} onClick={async () => editProfile(profile)} />
               </div>
             ))}
+            <div className="col">
+              <Profile name="Add Profile" onClick={() => history.push('/profiles-add')} />
+            </div>
           </div>
         </div>
         <div className="d-grid mt-4">
