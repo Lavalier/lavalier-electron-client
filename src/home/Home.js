@@ -143,69 +143,6 @@ function Home() {
                   poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
                 />
               </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
             </div>
           </div>
         </div>
