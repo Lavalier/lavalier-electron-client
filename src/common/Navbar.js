@@ -52,19 +52,19 @@ function Navbar(props) {
               <i className="icon-home icons right align-middle" />
               <span className="align-middle">Home</span>
             </a>
-            <a className="nav-link user-select-none">
+            <a className="nav-link user-select-none ps-4">
               <i className="icon-magnifier icons right align-middle" />
               <span className="align-middle">Search</span>
             </a>
-            <a className="nav-link user-select-none">
+            <a className="nav-link user-select-none ps-4">
               <i className="icon-film icons right align-middle" />
               <span className="align-middle">Movies</span>
             </a>
-            <a className="nav-link user-select-none">
+            <a className="nav-link user-select-none ps-4">
               <i className="icon-screen-desktop icons right align-middle" />
               <span className="align-middle">TV Shows</span>
             </a>
-            <a className="nav-link user-select-none">
+            <a className="nav-link user-select-none ps-4">
               <i className="icon-heart icons right align-middle" />
               <span className="align-middle">Favorites</span>
             </a>
