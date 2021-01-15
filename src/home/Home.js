@@ -5,7 +5,7 @@ import { fetchJSON } from '../fetchUtils'
 
 import LoadingScreen from '../common/LoadingScreen'
 import Navbar from '../common/Navbar'
-import MoviePosterCard from '../common/MoviePosterCard'
+import DiscoveryRow from '../common/DiscoveryRow'
 
 function Home() {
   const history = useHistory()
@@ -110,7 +110,7 @@ function Home() {
             loop
             muted
           >
-            <source src="https://vod-progressive.akamaized.net/exp=1610700285~acl=%2A%2F675798835.mp4%2A~hmac=31ad6a0ecf9faef80f8d47a56d9ddc14a26d73b8d300e6a80141e911a4e15a38/vimeo-prod-skyfire-std-us/01/30/8/200154504/675798835.mp4?filename=The+Martian+-+Theatrical+Trailer+%28104578%29.mp4" />
+            <source src="https://vod-progressive.akamaized.net/exp=1610718208~acl=%2A%2F675798835.mp4%2A~hmac=43bd561fe8b391df659fc56931aaf4618faa5a80de8455db9d8a5f0f76c349b7/vimeo-prod-skyfire-std-us/01/30/8/200154504/675798835.mp4?filename=The+Martian+-+Theatrical+Trailer+%28104578%29.mp4" />
           </video>
           <div className="position-absolute start-0 end-0">
             <div className="featured">
@@ -132,18 +132,9 @@ function Home() {
                 <i className="icon-volume-off icons align-middle" />
               </button>
             </div>
-            <div className="mt-6" />
-            <h4 className="text-white ms-6 mb-4">Continue Watching</h4>
-            <div className="row row-cols-auto mw-100 flex-nowrap overflow-x-hidden">
-              <div className="col ms-row-fix" />
-              <div className="col">
-                <MoviePosterCard
-                  name="The Midnight Sky"
-                  subtitle="2020"
-                  poster="http://image.tmdb.org/t/p/original//51JxCk77ZCqLzbLkrDl9Qho6KUh.jpg"
-                />
-              </div>
-            </div>
+            {discovery.map((section) => (
+              <DiscoveryRow name={section.name} media={section.media} />
+            ))}
           </div>
         </div>
       </div>

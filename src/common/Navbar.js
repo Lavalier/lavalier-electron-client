@@ -32,14 +32,6 @@ function Navbar(props) {
     history.go(0)
   }
 
-  function manageProfiles() {
-    history.push('/profiles')
-  }
-
-  async function signout() {
-    history.push('/logout')
-  }
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-special position-fixed start-0 end-0">
       <div className="container-fluid px-5">
@@ -88,7 +80,7 @@ function Navbar(props) {
                     </li>
                   ))}
                 <li>
-                  <a className="dropdown-item user-select-none" onClick={() => manageProfiles()}>
+                  <a className="dropdown-item user-select-none" onClick={() => history.push('/profiles-manage')}>
                     Manage Profiles
                   </a>
                 </li>
@@ -105,7 +97,7 @@ function Navbar(props) {
                   <a
                     className="dropdown-item user-select-none"
                     onClick={async () => {
-                      signout()
+                      history.push('/logout')
                     }}
                   >
                     Sign out of Lavalier

@@ -8,6 +8,8 @@ import ServerLogin from './setup/ServerLogin'
 import SetupServer from './setup/SetupServer'
 import Home from './home/Home'
 import ProfileSelection from './home/ProfileSelection'
+import ManageProfiles from './home/ManageProfiles'
+import ManageProfile from './home/ManageProfile'
 import AddProfile from './home/AddProfile'
 import Logout from './home/Logout'
 import VideoPlayer from './watch/VideoPlayer'
@@ -29,6 +31,8 @@ function App() {
         <Route path="/home" component={Home}></Route>
         <Route path="/logout" component={Logout}></Route>
         <Route path="/profiles" component={ProfileSelection}></Route>
+        <Route path="/profiles-manage" component={ManageProfiles}></Route>
+        <Route path="/profiles-edit" component={ManageProfile}></Route>
         <Route path="/profiles-add" component={AddProfile}></Route>
         <Route path="/watch/:id" component={VideoPlayer}></Route>
       </Switch>

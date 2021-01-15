@@ -7,7 +7,7 @@ import LogoText from '../common/LogoText'
 import LoadingScreen from '../common/LoadingScreen'
 import Profile from './Profile'
 
-function ProfileSelection() {
+function ManageProfiles() {
   const history = useHistory()
 
   const [currentServer, setCurrentServer] = usePersistedState('currentServer', {})
@@ -30,15 +30,10 @@ function ProfileSelection() {
     setProfiles(profilesResponse)
   }, [])
 
-  async function useProfile(profile) {
-    await setCurrentServer({
-      ...currentServer,
-      ...{
-        profile: profile._id
-      }
+  async function editProfile(profile) {
+    history.push('/profiles-edit', {
+      profile: profile._id
     })
-
-    history.push('/home')
   }
 
   return profiles ? (
@@ -47,21 +42,19 @@ function ProfileSelection() {
       <div className="container special-gradient-content bg-white mw-50 rounded shadow-thick p-5">
         <div className="d-grid">
           <LogoText />
-          <h2 className="text-center mb-4">Who's watching?</h2>
+          <h2 className="text-center mb-4">Manage Profiles</h2>
           <div className="row row-cols-auto d-flex justify-content-center">
             {profiles.map((profile) => (
               <div className="col">
-                <Profile name={profile.name} onClick={async () => useProfile(profile)} />
+                <Profile name={profile.name} onClick={async () => editProfile(profile)} />
               </div>
             ))}
-            <div className="col">
-              <Profile name="Add Profile" onClick={() => history.push('/profiles-add')} />
-            </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center mt-4">
-          <button className="btn btn-danger" onClick={() => history.push('/profiles-manage')}>
-            Manage Profiles
+        <div className="d-grid mt-4">
+          <button type="button" onClick={history.goBack} className="btn btn-lg btn-primary">
+            <i className="icon-arrow-left-circle icons right align-middle"></i>
+            <span className="align-middle">Back</span>
           </button>
         </div>
       </div>
@@ -71,4 +64,4 @@ function ProfileSelection() {
   )
 }
 
-export default ProfileSelection
+export default ManageProfiles
