@@ -17,6 +17,8 @@ function Home() {
   const [discovery, setDiscovery] = useState()
   const [featured, setFeatured] = useState()
 
+  const [featuredVideoMuted, setFeatureVideoMuted] = useState(true)
+
   // Make sure we have a server before we continue :D
   if (servers.length == 0) {
     history.push('/setup')
@@ -108,7 +110,7 @@ function Home() {
             preload="auto"
             autoPlay
             loop
-            muted
+            muted={featuredVideoMuted}
           >
             <source src="https://vod-progressive.akamaized.net/exp=1610718208~acl=%2A%2F675798835.mp4%2A~hmac=43bd561fe8b391df659fc56931aaf4618faa5a80de8455db9d8a5f0f76c349b7/vimeo-prod-skyfire-std-us/01/30/8/200154504/675798835.mp4?filename=The+Martian+-+Theatrical+Trailer+%28104578%29.mp4" />
           </video>
@@ -128,8 +130,15 @@ function Home() {
                 <i className="icon-info icons right align-middle" />
                 <span className="align-middle">Details</span>
               </button>
-              <button className="btn btn-secondary btn-lg mt-4 ms-3 rounded-pill float-end">
-                <i className="icon-volume-off icons align-middle" />
+              <button
+                className="btn btn-secondary btn-lg mt-4 ms-3 rounded-pill float-end"
+                onClick={() => setFeatureVideoMuted(!featuredVideoMuted)}
+              >
+                {featuredVideoMuted ? (
+                  <i className="icon-volume-off icons align-middle" />
+                ) : (
+                  <i className="icon-volume-2 icons align-middle" />
+                )}
               </button>
             </div>
             {discovery.map((section) => (
