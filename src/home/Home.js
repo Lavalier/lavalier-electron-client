@@ -141,6 +141,7 @@ function Home() {
                 )}
               </button>
             </div>
+            <div className="mt-6" />
             {discovery.map((section) => (
               <DiscoveryRow name={section.name} media={section.media} />
             ))}

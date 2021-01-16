@@ -7,7 +7,7 @@ function DiscoveryRow(props) {
 
   return (
     <div>
-      <div className="mt-6" />
+      <div className="mt-3" />
       <h4 className="text-white ms-6 mb-4">{props.name}</h4>
       {props.media.map((row) => (
         <div className="row row-cols-auto mw-100 flex-nowrap overflow-x-hidden">
