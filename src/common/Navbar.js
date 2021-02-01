@@ -4,6 +4,7 @@ import usePersistedState from '../usePersistedState'
 import { fetchJSON } from '../fetchUtils'
 
 import LogoText from './LogoText'
+import NavbarLink from './NavbarLink'
 
 function Navbar(props) {
   const history = useHistory()
@@ -40,17 +41,8 @@ function Navbar(props) {
         </a>
         <div className="collapse navbar-collapse">
           <div className="navbar-nav me-auto">
-            <a className="nav-link active user-select-none">
-              <i className="icon-home icons right align-middle" />
-              <span className="align-middle">Home</span>
-            </a>
-            <a
-              className="nav-link user-select-none ps-4"
-              onClick={() => history.push('/search', { profile: props.profile })}
-            >
-              <i className="icon-magnifier icons right align-middle" />
-              <span className="align-middle">Search</span>
-            </a>
+            <NavbarLink icon="icon-home" name="Home" href="/home" history={history} profile={props.profile} />
+            <NavbarLink icon="icon-magnifier" name="Search" href="/search" history={history} profile={props.profile} />
             <a className="nav-link user-select-none ps-4">
               <i className="icon-film icons right align-middle" />
               <span className="align-middle">Movies</span>
