@@ -65,6 +65,10 @@ body {
   max-width: 50%;
 }
 
+.my-6 {
+  margin-top: 6rem;
+}
+
 .shadow-thick {
   box-shadow: 0 4px 15px 5px #000000b8;
 }
@@ -179,6 +183,10 @@ ul.dropdown-menu:hover {
   margin-top: 14rem !important;
 }
 
+.mt-6-no-video {
+  margin-top: 6rem !important;
+}
+
 @media (max-width: 1730px) {
   .mt-6 {
     margin-top: 4rem !important;
@@ -214,7 +222,7 @@ ul.dropdown-menu:hover {
 // Navbar ======================================================================
 
 .navbar {
-  font-size: $font-size-sm;
+  font-size: $h6-font-size;
   font-weight: 600;
 
   &-nav {
@@ -227,6 +235,10 @@ ul.dropdown-menu:hover {
   &-brand {
     margin-right: 2rem;
   }
+}
+
+.nav-large-icon {
+  font-size: $h5-font-size;
 }
 
 .bg-primary {

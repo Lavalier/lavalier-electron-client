@@ -44,7 +44,10 @@ function Navbar(props) {
               <i className="icon-home icons right align-middle" />
               <span className="align-middle">Home</span>
             </a>
-            <a className="nav-link user-select-none ps-4">
+            <a
+              className="nav-link user-select-none ps-4"
+              onClick={() => history.push('/search', { profile: props.profile })}
+            >
               <i className="icon-magnifier icons right align-middle" />
               <span className="align-middle">Search</span>
             </a>
@@ -62,7 +65,10 @@ function Navbar(props) {
             </a>
           </div>
           <div className="navbar-nav">
-            <a className="dropdown text-decoration-none">
+            <a className="nav-link user-select-none ps-4">
+              <i className="icon-grid icons nav-large-icon" />
+            </a>
+            <div className="dropdown text-decoration-none">
               <a className="nav-link dropdown-toggle user-select-none" role="button">
                 {props.profile.name}
               </a>
@@ -91,7 +97,10 @@ function Navbar(props) {
                   <a className="dropdown-item user-select-none">Account</a>
                 </li>
                 <li>
-                  <a className="dropdown-item user-select-none">Switch Server</a>
+                  <a className="dropdown-item user-select-none">App Settings</a>
+                </li>
+                <li>
+                  <a className="dropdown-item user-select-none">Server Settings</a>
                 </li>
                 <li>
                   <a
@@ -104,7 +113,7 @@ function Navbar(props) {
                   </a>
                 </li>
               </ul>
-            </a>
+            </div>
           </div>
         </div>
       </div>

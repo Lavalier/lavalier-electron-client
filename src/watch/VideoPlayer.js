@@ -11,7 +11,7 @@ function VideoPlayer(props) {
         </div>
       </div> */}
       {/* <div className="position-absolute bg-dim top-secondary-view top-0 bottom-0 start-0 end-0"></div> */}
-      <video className="position-fixed w-100 h-100 bg-black" preload="auto" autoPlay controls>
+      <video className="position-fixed w-100 h-100 bg-black start-0 end-0" preload="auto" autoPlay controls>
         <source src={`${currentServer.address}/api/watch/${props.match.params.id}?token=${currentServer.token}`} />
       </video>
       {/* <div className="position-absolute bottom-0 start-0 end-0">

@@ -6,6 +6,7 @@ import { fetchJSON } from '../fetchUtils'
 import LoadingScreen from '../common/LoadingScreen'
 import Navbar from '../common/Navbar'
 import DiscoveryRow from '../common/DiscoveryRow'
+import FeaturedJumbotron from './FeaturedJumbotron'
 
 function Home() {
   const history = useHistory()
@@ -105,43 +106,33 @@ function Home() {
         <div className="special-gradient special-gradient-two"></div>
         <div className="special-gradient-content min-vh-100">
           <Navbar profile={profile} />
-          <video
-            className="w-100 h-100 position-absolute top-0 object-cover bg-black dimmed-item"
-            preload="auto"
-            autoPlay
-            loop
-            muted={featuredVideoMuted}
-          >
-            <source src="https://vod-progressive.akamaized.net/exp=1610718208~acl=%2A%2F675798835.mp4%2A~hmac=43bd561fe8b391df659fc56931aaf4618faa5a80de8455db9d8a5f0f76c349b7/vimeo-prod-skyfire-std-us/01/30/8/200154504/675798835.mp4?filename=The+Martian+-+Theatrical+Trailer+%28104578%29.mp4" />
-          </video>
+          {featured._id && (
+            <video
+              className="w-100 h-100 position-absolute top-0 object-cover bg-black dimmed-item"
+              preload="auto"
+              autoPlay
+              loop
+              muted={featuredVideoMuted}
+            >
+              <source src={featured.trailer} />
+            </video>
+          )}
           <div className="position-absolute start-0 end-0">
-            <div className="featured">
-              <h1 className="display-1 text-white">The Martian</h1>
-              <h4 className="text-white">2015 ‧ Sci-fi/Adventure ‧ 2h 31m</h4>
-              <h4 className="text-white mt-5 w-50">
-                When astronauts blast off from the planet Mars, they leave behind Mark Watney (Matt Damon), presumed
-                dead after a fierce storm.
-              </h4>
-              <button className="btn btn-danger fw-bolder mt-4">
-                <i className="icon-control-play icons right align-middle" />
-                <span className="align-middle">Play</span>
-              </button>
-              <button className="btn btn-secondary fw-bolder mt-4 ms-3">
-                <i className="icon-info icons right align-middle" />
-                <span className="align-middle">Details</span>
-              </button>
-              <button
-                className="btn btn-secondary btn-lg mt-4 ms-3 rounded-pill float-end"
+            {featured._id && (
+              <FeaturedJumbotron
+                content_title={featured.content_title}
+                release_date={featured.release_date}
+                genres={featured.genres}
+                runtime={featured.runtime}
+                summary={featured.summary}
                 onClick={() => setFeatureVideoMuted(!featuredVideoMuted)}
-              >
-                {featuredVideoMuted ? (
-                  <i className="icon-volume-off icons align-middle" />
-                ) : (
-                  <i className="icon-volume-2 icons align-middle" />
-                )}
-              </button>
-            </div>
-            <div className="mt-6" />
+                muted={featuredVideoMuted}
+                onPlay={async () => {
+                  history.push(`/watch/${featured._id}`)
+                }}
+              />
+            )}
+            {featured._id ? <div className="mt-6" /> : <div className="mt-6-no-video" />}
             {discovery.map((section) => (
               <DiscoveryRow name={section.name} media={section.media} />
             ))}

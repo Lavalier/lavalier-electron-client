@@ -7,6 +7,7 @@ import Welcome from './setup/Welcome'
 import ServerLogin from './setup/ServerLogin'
 import SetupServer from './setup/SetupServer'
 import Home from './home/Home'
+import Search from './search/Search'
 import ProfileSelection from './home/ProfileSelection'
 import ManageProfiles from './home/ManageProfiles'
 import ManageProfile from './home/ManageProfile'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/setup-server" component={SetupServer}></Route>
         <Route path="/login" component={ServerLogin}></Route>
         <Route path="/home" component={Home}></Route>
+        <Route path="/search" component={Search}></Route>
         <Route path="/logout" component={Logout}></Route>
         <Route path="/profiles" component={ProfileSelection}></Route>
         <Route path="/profiles-manage" component={ManageProfiles}></Route>

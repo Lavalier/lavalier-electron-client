@@ -25,7 +25,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "name": "Lavalier"
+        "name": "Lavalier",
+        "icon": "./build/favicon"
       }
     }
   },
