@@ -92,9 +92,8 @@ function Home() {
       }
     })
 
-    // Discovery content not found
     if (featuredContentResponse.error) {
-      // TODO: Error???
+      setFeatured({})
     } else {
       setFeatured(featuredContentResponse)
     }
